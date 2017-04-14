@@ -1,0 +1,7 @@
+{
+   "name": "domain",
+   "version": "0.0.1",
+   "description": "The domain model",
+   "private": true,
+   "main": "domain.js"
+}

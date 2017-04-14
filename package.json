@@ -1,0 +1,26 @@
+{
+  "name": "learning-js",
+  "version": "1.0.0",
+  "description": "This is an exploratory project to learn JavaScript",
+  "private": true,
+  "main": "new.js",
+  "scripts": {
+    "test": "node_modules/.bin/tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyanide789/learning-js.git"
+  },
+  "author": "cyanide789",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyanide789/learning-js/issues"
+  },
+  "homepage": "https://github.com/Cyanide789/learning-js#readme",
+  "dependencies": {
+     "domain": "file:src/umbrella/domain"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}

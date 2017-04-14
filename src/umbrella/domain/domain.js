@@ -6,7 +6,12 @@
 
 "use strict"
 
-// Main logic
+module.exports = {
+    Person,
+    Company
+};
+
+/*// Main logic
 console.log("== start of program ==");
 
 // Create a valid company object
@@ -24,7 +29,7 @@ try {
     console.log(error);
 }
 
-console.log("=== end of program ===");
+console.log("=== end of program ===");*/
 
 // Objects
 
@@ -49,7 +54,7 @@ function Person(name, age, company) {
 }
 
 /**
- * Creates a company object.
+ * Creates a Company object.
  *
  * @param {string} name
  * @param {string} tickerSymbol

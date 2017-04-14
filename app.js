@@ -1,11 +1,12 @@
-/* 
+/*
   This is an exploratory project to learn JavaScript
 
   @author tom.piccin
 */
 
-// Main logic
+"use strict"
 
+// Main logic
 console.log("== start of program ==");
 
 // Create a valid person object
@@ -14,9 +15,9 @@ console.log(tom.toString());
 
 // Create an invalid person object
 try {
-  var dries = new Person("Dries", "Dries");
+    var dries = new Person("Dries", "Dries");
 } catch (error) {
-  console.log(error);
+    console.log(error);
 }
 
 console.log("=== end of program ===");
@@ -25,43 +26,43 @@ console.log("=== end of program ===");
 
 /**
  * Creates a new Person object.
- * 
- * @param {String} name 
- * @param {Number} age 
+ *
+ * @param {string} name
+ * @param {Number} age
  */
 function Person(name, age) {
 
-  isString(name) ? this.name = name : _throw(name + " is not a valid name");
-  isNumber(age) ? this.age = age : _throw(age + " is not a valid age");
+    isString(name) ? this.name = name : _throw(name + " is not a valid name");
+    isNumber(age) ? this.age = age : _throw(age + " is not a valid age");
 
-  this.toString = function() {
-    return "Person, name: " + name + ", age: " + age;
-  }
+    this.toString = function () {
+        return "Person, name: " + name + ", age: " + age;
+    }
 }
 
 /**
  * Throws an eror with the provided message.
- * 
- * @param {*} message 
+ *
+ * @param {*} message
  */
 function _throw(message) {
-  throw message;
+    throw message;
 }
 
 /**
  * Checks whether the argument is a string.
- * 
- * @param {*} candidate_string
+ *
+ * @param {*} candidateString
  */
-function isString(candidate_string) {
-  return typeof candidate_string === 'string';
+function isString(candidateString) {
+    return typeof candidateString === 'string';
 }
 
 /**
  * Checks whether the argument is a number.
- * 
- * @param {*} candidate_number 
+ *
+ * @param {*} candidateNumber
  */
-function isNumber(candidate_number) {
-  return typeof candidate_number === 'number';
+function isNumber(candidateNumber) {
+    return typeof candidateNumber === 'number';
 }

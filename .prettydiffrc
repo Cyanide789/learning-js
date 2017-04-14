@@ -1,0 +1,4 @@
+{
+    "ternaryline": true,    // Keep ternary operators on the same line
+    "wrap": 80
+}

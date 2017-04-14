@@ -1,9 +1,16 @@
 var test = require("tape");
-var app = require("domain");
+var dom = require("umbrella.domain");
 
 test("TestPerson", function (assert) {
-
-    assert.equal(1, 2, "Numbers 1 and 2 are the same");
+    var person = new dom.Person("Tom", 28);
+    assert.equals(person.name, "Tom", "Person name equals Tom");
+    assert.equals(person.age, 28, "Person age equals 28");
     assert.end();
+})
 
-});
+test("Company", function (assert) {
+    var company = new dom.Company("MiniCorp", "MCP");
+    assert.equals(company.name, "MiniCorp", "Company name equals MiniCorp");
+    assert.equals(company.tickerSymbol, "MCP", "Company ticker symbol equals MCP");
+    assert.end();
+})

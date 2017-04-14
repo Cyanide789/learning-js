@@ -6,10 +6,20 @@
 
 // Main logic
 
-var tom = new Person("Tom", 28);
-var msg = tom.toString();
+console.log("== start of program ==");
 
-console.log(msg);
+// Create a valid person object
+var tom = new Person("Tom", 28);
+console.log(tom.toString());
+
+// Create an invalid person object
+try {
+  var dries = new Person("Dries", "Dries");
+} catch (error) {
+  console.log(error);
+}
+
+console.log("=== end of program ===");
 
 // Objects
 
@@ -20,11 +30,38 @@ console.log(msg);
  * @param {Number} age 
  */
 function Person(name, age) {
-  
-  this.name = name;
-  this.age = age;
+
+  isString(name) ? this.name = name : _throw(name + " is not a valid name");
+  isNumber(age) ? this.age = age : _throw(age + " is not a valid age");
 
   this.toString = function() {
-    return "name: " + name + ", age: " + age;
+    return "Person, name: " + name + ", age: " + age;
   }
+}
+
+/**
+ * Throws an eror with the provided message.
+ * 
+ * @param {*} message 
+ */
+function _throw(message) {
+  throw message;
+}
+
+/**
+ * Checks whether the argument is a string.
+ * 
+ * @param {*} candidate_string
+ */
+function isString(candidate_string) {
+  return typeof candidate_string === 'string';
+}
+
+/**
+ * Checks whether the argument is a number.
+ * 
+ * @param {*} candidate_number 
+ */
+function isNumber(candidate_number) {
+  return typeof candidate_number === 'number';
 }
